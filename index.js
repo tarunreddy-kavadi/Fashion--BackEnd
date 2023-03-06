@@ -20,6 +20,7 @@ mongoose
     console.log(err);
   });
 
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
@@ -28,6 +29,14 @@ app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
+
+app.get("/",(req,res)=>{
+res.send("Hello its Working")
+})
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
 });
+// exports.app = functions.https.onRequest((req,res)=>{
+//   functions.logger.info("hello logs", { structuredData: true});
+//   res.send("hello Its Working")
+// })
