@@ -24,6 +24,7 @@ mongoose
 app.use(cors(
   {
     origin:"https://quiet-kulfi-8dacf7.netlify.app/",
+    method:[GET,PUT,DELETE,POST]
   }
 ));
 app.use(express.json());
