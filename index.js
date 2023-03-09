@@ -31,6 +31,7 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://quiet-kulfi-8dacf7.netlify.app');
+  res.setHeader('Access-Control-Allow-Headers', "Content-Type, Authorization");
   next();
 });
 
