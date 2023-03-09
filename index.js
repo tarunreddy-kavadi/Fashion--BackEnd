@@ -23,7 +23,7 @@ mongoose
 
 app.use(cors(
   {
-    origin:"https://quiet-kulfi-8dacf7.netlify.app/",
+    origin:"https://quiet-kulfi-8dacf7.netlify.app",
   }
 ));
 app.use(express.json());
@@ -35,14 +35,7 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+
 
 app.get("/",(req,res)=>{
 res.send("Hello its Working")
