@@ -32,7 +32,7 @@ app.use("/api/checkout", stripeRoute);
 
 app.use(cors({
   origin: '*', // use your actual domain name (or localhost), using * is not recommended
-  methods: ['POST','OPTIONS'],
+  methods: ['POST'],
   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
   credentials: true
 }))
