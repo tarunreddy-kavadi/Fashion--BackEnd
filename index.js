@@ -20,6 +20,7 @@ mongoose
     console.log(err);
   });
 
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
@@ -31,7 +32,7 @@ app.use("/api/checkout", stripeRoute);
 
 app.use(cors({
   origin: 'https://quiet-kulfi-8dacf7.netlify.app', // use your actual domain name (or localhost), using * is not recommended
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
+  methods: ['POST','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
   credentials: true
 }))
