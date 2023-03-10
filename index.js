@@ -31,8 +31,8 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
 app.use(cors({
-  origin: '*', // use your actual domain name (or localhost), using * is not recommended
-  methods: ['POST','OPTIONS'],
+  origin: 'https://quiet-kulfi-8dacf7.netlify.app/', // use your actual domain name (or localhost), using * is not recommended
+  methods: ['POST','GET','PUT','HEAD','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
   credentials: true
 }))
