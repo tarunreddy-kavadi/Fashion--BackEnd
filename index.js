@@ -30,11 +30,11 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
-// app.use(cors({
-//   origin: 'https://quiet-kulfi-8dacf7.netlify.app', // use your actual domain name (or localhost), using * is not recommended
-//   allowedHeaders: ['Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
-//   credentials: true
-// }))
+app.use(cors({
+  origin: 'https://quiet-kulfi-8dacf7.netlify.app', // use your actual domain name (or localhost), using * is not recommended
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+  credentials: true
+}))
 
 
 app.get("/",(req,res)=>{
